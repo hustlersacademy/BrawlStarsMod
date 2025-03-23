@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <ImageView android:layout_gravity="center" android:id="@id/empty_friend_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/empty_friend_image_margin_bottom" android:src="@null" />
+        <TextView android:textSize="@dimen/empty_friend_text_size" android:textColor="?gray900s" android:gravity="center" android:id="@id/empty_friend_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/empty_friend_message" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

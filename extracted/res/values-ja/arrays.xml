@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="popup_side_indexer">
+        <item>あ</item>
+        <item>か</item>
+        <item>た</item>
+        <item>な</item>
+        <item>ま</item>
+        <item>や</item>
+        <item>わ</item>
+        <item>ㄱ</item>
+        <item>ㅂ</item>
+        <item>ㅇ</item>
+        <item>A</item>
+        <item>F</item>
+        <item>O</item>
+        <item>Z</item>
+        <item>\#</item>
+    </string-array>
+    <string-array name="popup_side_indexer_landscape">
+        <item>あ</item>
+        <item>か</item>
+        <item>た</item>
+        <item>ま</item>
+        <item>わ</item>
+        <item>\#</item>
+    </string-array>
+    <string-array name="side_indexer">
+        <item>あ</item>
+        <item>か</item>
+        <item>さ</item>
+        <item>た</item>
+        <item>な</item>
+        <item>は</item>
+        <item>ま</item>
+        <item>や</item>
+        <item>ら</item>
+        <item>わ</item>
+        <item>ㄱ</item>
+        <item>ㅂ</item>
+        <item>ㅇ</item>
+        <item>ㅊ</item>
+        <item>A</item>
+        <item>F</item>
+        <item>O</item>
+        <item>Z</item>
+        <item>\#</item>
+    </string-array>
+    <string-array name="side_indexer_landscape">
+        <item>あ</item>
+        <item>か</item>
+        <item>さ</item>
+        <item>た</item>
+        <item>は</item>
+        <item>ま</item>
+        <item>ら</item>
+        <item>わ</item>
+        <item>\#</item>
+    </string-array>
+</resources>

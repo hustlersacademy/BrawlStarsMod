@@ -1,0 +1,1193 @@
+.class public abstract Lc0/l;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# static fields
+.field public static final a:Lc0/h;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    .line 1
+    new-instance v0, Lc0/h;
+
+    .line 2
+    .line 3
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    sput-object v0, Lc0/l;->a:Lc0/h;
+
+    .line 7
+    .line 8
+    return-void
+.end method
+
+.method public static a(ZLp8/n1;Ll/a;Ll0/j;Ljava/util/concurrent/Executor;)V
+    .locals 1
+
+    .line 1
+    invoke-static {p1}, Lk1/i;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 2
+    .line 3
+    .line 4
+    invoke-static {p2}, Lk1/i;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 5
+    .line 6
+    .line 7
+    invoke-static {p3}, Lk1/i;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 8
+    .line 9
+    .line 10
+    invoke-static {p4}, Lk1/i;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 11
+    .line 12
+    .line 13
+    new-instance v0, Lc0/i;
+
+    .line 14
+    .line 15
+    invoke-direct {v0, p3, p2}, Lc0/i;-><init>(Ll0/j;Ll/a;)V
+
+    .line 16
+    .line 17
+    .line 18
+    invoke-static {p1, v0, p4}, Lc0/l;->addCallback(Lp8/n1;Lc0/d;Ljava/util/concurrent/Executor;)V
+
+    .line 19
+    .line 20
+    .line 21
+    if-eqz p0, :cond_0
+
+    .line 22
+    .line 23
+    new-instance p0, Lc0/j;
+
+    .line 24
+    .line 25
+    invoke-direct {p0, p1}, Lc0/j;-><init>(Lp8/n1;)V
+
+    .line 26
+    .line 27
+    .line 28
+    invoke-static {}, Lb0/a;->directExecutor()Ljava/util/concurrent/Executor;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object p1
+
+    .line 32
+    invoke-virtual {p3, p0, p1}, Ll0/j;->addCancellationListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    .line 33
+    .line 34
+    .line 35
+    :cond_0
+    return-void
+.end method
+
+.method public static addCallback(Lp8/n1;Lc0/d;Ljava/util/concurrent/Executor;)V
+    .locals 1
+    .param p0    # Lp8/n1;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Lc0/d;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/util/concurrent/Executor;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<V:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lp8/n1;",
+            "Lc0/d;",
+            "Ljava/util/concurrent/Executor;",
+            ")V"
+        }
+    .end annotation
+
+    .line 1
+    invoke-static {p1}, Lk1/i;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 2
+    .line 3
+    .line 4
+    new-instance v0, Lc0/k;
+
+    .line 5
+    .line 6
+    invoke-direct {v0, p0, p1}, Lc0/k;-><init>(Lp8/n1;Lc0/d;)V
+
+    .line 7
+    .line 8
+    .line 9
+    invoke-interface {p0, v0, p2}, Lp8/n1;->addListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    .line 10
+    .line 11
+    .line 12
+    return-void
+.end method
+
+.method public static allAsList(Ljava/util/Collection;)Lp8/n1;
+    .locals 3
+    .param p0    # Ljava/util/Collection;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<V:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/util/Collection<",
+            "+",
+            "Lp8/n1;",
+            ">;)",
+            "Lp8/n1;"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Lc0/t;
+
+    .line 2
+    .line 3
+    new-instance v1, Ljava/util/ArrayList;
+
+    .line 4
+    .line 5
+    invoke-direct {v1, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    .line 6
+    .line 7
+    .line 8
+    const/4 p0, 0x1
+
+    .line 9
+    invoke-static {}, Lb0/a;->directExecutor()Ljava/util/concurrent/Executor;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v2
+
+    .line 13
+    invoke-direct {v0, v1, p0, v2}, Lc0/t;-><init>(Ljava/util/ArrayList;ZLjava/util/concurrent/Executor;)V
+
+    .line 14
+    .line 15
+    .line 16
+    return-object v0
+.end method
+
+.method public static getDone(Ljava/util/concurrent/Future;)Ljava/lang/Object;
+    .locals 6
+    .param p0    # Ljava/util/concurrent/Future;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<V:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/util/concurrent/Future<",
+            "TV;>;)TV;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/util/concurrent/ExecutionException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-interface {p0}, Ljava/util/concurrent/Future;->isDone()Z
+
+    .line 2
+    .line 3
+    .line 4
+    move-result v3
+
+    .line 5
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    .line 6
+    .line 7
+    const/16 v1, 0x20
+
+    new-array v0, v1, [C
+
+    const/16 v2, -0x641f
+
+    xor-int/lit16 v2, v2, -0x647b
+
+    int-to-char v2, v2
+
+    const v1, 0x12
+
+    aput-char v2, v0, v1
+
+    const v1, 0x12
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x44
+
+    int-to-char v2, v2
+
+    const v1, 0x16
+
+    aput-char v2, v0, v1
+
+    const v1, 0x16
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x4f
+
+    int-to-char v2, v2
+
+    const v1, 0x1b
+
+    aput-char v2, v0, v1
+
+    const v1, 0x1b
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0xa
+
+    int-to-char v2, v2
+
+    const v1, 0x1d
+
+    aput-char v2, v0, v1
+
+    const v1, 0x12
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x22
+
+    int-to-char v2, v2
+
+    const v1, 0x0
+
+    aput-char v2, v0, v1
+
+    const v1, 0x0
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x27
+
+    int-to-char v2, v2
+
+    const v1, 0x8
+
+    aput-char v2, v0, v1
+
+    const v1, 0x8
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x41
+
+    int-to-char v2, v2
+
+    const v1, 0x6
+
+    aput-char v2, v0, v1
+
+    const v1, 0x16
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x54
+
+    int-to-char v2, v2
+
+    const v1, 0x2
+
+    aput-char v2, v0, v1
+
+    const v1, 0x6
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x53
+
+    int-to-char v2, v2
+
+    const v1, 0x9
+
+    aput-char v2, v0, v1
+
+    const v1, 0x1d
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x0
+
+    int-to-char v2, v2
+
+    const v1, 0x18
+
+    aput-char v2, v0, v1
+
+    const v1, 0x16
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x50
+
+    int-to-char v2, v2
+
+    const v1, 0xd
+
+    aput-char v2, v0, v1
+
+    const v1, 0x12
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x44
+
+    int-to-char v2, v2
+
+    const v1, 0x19
+
+    aput-char v2, v0, v1
+
+    const v1, 0x8
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x15
+
+    int-to-char v2, v2
+
+    const v1, 0x14
+
+    aput-char v2, v0, v1
+
+    const v1, 0x2
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x1
+
+    int-to-char v2, v2
+
+    const v1, 0x3
+
+    aput-char v2, v0, v1
+
+    const v1, 0x19
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x0
+
+    int-to-char v2, v2
+
+    const v1, 0xa
+
+    aput-char v2, v0, v1
+
+    const v1, 0x14
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x11
+
+    int-to-char v2, v2
+
+    const v1, 0xb
+
+    aput-char v2, v0, v1
+
+    const v1, 0x0
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x29
+
+    int-to-char v2, v2
+
+    const v1, 0x15
+
+    aput-char v2, v0, v1
+
+    const v1, 0x1d
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x10
+
+    int-to-char v2, v2
+
+    const v1, 0x1
+
+    aput-char v2, v0, v1
+
+    const v1, 0x12
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x10
+
+    int-to-char v2, v2
+
+    const v1, 0x10
+
+    aput-char v2, v0, v1
+
+    const v1, 0x19
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x44
+
+    int-to-char v2, v2
+
+    const v1, 0x1a
+
+    aput-char v2, v0, v1
+
+    const v1, 0xd
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x15
+
+    int-to-char v2, v2
+
+    const v1, 0x5
+
+    aput-char v2, v0, v1
+
+    const v1, 0x16
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0xc
+
+    int-to-char v2, v2
+
+    const v1, 0x1e
+
+    aput-char v2, v0, v1
+
+    const v1, 0x16
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x43
+
+    int-to-char v2, v2
+
+    const v1, 0xf
+
+    aput-char v2, v0, v1
+
+    const v1, 0x18
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x1d
+
+    int-to-char v2, v2
+
+    const v1, 0xc
+
+    aput-char v2, v0, v1
+
+    const v1, 0x6
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x45
+
+    int-to-char v2, v2
+
+    const v1, 0x11
+
+    aput-char v2, v0, v1
+
+    const v1, 0xc
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x58
+
+    int-to-char v2, v2
+
+    const v1, 0x1f
+
+    aput-char v2, v0, v1
+
+    const v1, 0x18
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x45
+
+    int-to-char v2, v2
+
+    const v1, 0x13
+
+    aput-char v2, v0, v1
+
+    const v1, 0x1a
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x1
+
+    int-to-char v2, v2
+
+    const v1, 0xe
+
+    aput-char v2, v0, v1
+
+    const v1, 0x1e
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x4e
+
+    int-to-char v2, v2
+
+    const v1, 0x17
+
+    aput-char v2, v0, v1
+
+    const v1, 0x0
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x34
+
+    int-to-char v2, v2
+
+    const v1, 0x4
+
+    aput-char v2, v0, v1
+
+    const v1, 0x1e
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x42
+
+    int-to-char v2, v2
+
+    const v1, 0x1c
+
+    aput-char v2, v0, v1
+
+    const v1, 0x5
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x12
+
+    int-to-char v2, v2
+
+    const v1, 0x7
+
+    aput-char v2, v0, v1
+
+    new-instance v2, Ljava/lang/String;
+
+    invoke-direct {v2, v0}, Ljava/lang/String;-><init>([C)V
+
+    invoke-virtual {v2}, Ljava/lang/String;->intern()Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 8
+    .line 9
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 10
+    .line 11
+    .line 12
+    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 13
+    .line 14
+    .line 15
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v4
+
+    .line 19
+    invoke-static {v3, v4}, Lk1/i;->checkState(ZLjava/lang/String;)V
+
+    .line 20
+    .line 21
+    .line 22
+    invoke-static {p0}, Lc0/l;->getUninterruptibly(Ljava/util/concurrent/Future;)Ljava/lang/Object;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object p0
+
+    .line 26
+    return-object p0
+.end method
+
+.method public static getUninterruptibly(Ljava/util/concurrent/Future;)Ljava/lang/Object;
+    .locals 1
+    .param p0    # Ljava/util/concurrent/Future;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<V:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/util/concurrent/Future<",
+            "TV;>;)TV;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/util/concurrent/ExecutionException;
+        }
+    .end annotation
+
+    .line 1
+    const/4 v0, 0x0
+
+    .line 2
+    :goto_0
+    :try_start_0
+    invoke-interface {p0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 6
+    if-eqz v0, :cond_0
+
+    .line 7
+    .line 8
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
+
+    .line 13
+    .line 14
+    .line 15
+    :cond_0
+    return-object p0
+
+    .line 16
+    :catchall_0
+    move-exception p0
+
+    .line 17
+    if-eqz v0, :cond_1
+
+    .line 18
+    .line 19
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v0
+
+    .line 23
+    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
+
+    .line 24
+    .line 25
+    .line 26
+    :cond_1
+    throw p0
+
+    .line 27
+    :catch_0
+    const/4 v0, 0x1
+
+    .line 28
+    goto :goto_0
+.end method
+
+.method public static immediateFailedFuture(Ljava/lang/Throwable;)Lp8/n1;
+    .locals 1
+    .param p0    # Ljava/lang/Throwable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<V:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/lang/Throwable;",
+            ")",
+            "Lp8/n1;"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Lc0/m;
+
+    .line 2
+    .line 3
+    invoke-direct {v0, p0}, Lc0/m;-><init>(Ljava/lang/Throwable;)V
+
+    .line 4
+    .line 5
+    .line 6
+    return-object v0
+.end method
+
+.method public static immediateFailedScheduledFuture(Ljava/lang/Throwable;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 1
+    .param p0    # Ljava/lang/Throwable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<V:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/lang/Throwable;",
+            ")",
+            "Ljava/util/concurrent/ScheduledFuture<",
+            "TV;>;"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Lc0/n;
+
+    .line 2
+    .line 3
+    invoke-direct {v0, p0}, Lc0/m;-><init>(Ljava/lang/Throwable;)V
+
+    .line 4
+    .line 5
+    .line 6
+    return-object v0
+.end method
+
+.method public static immediateFuture(Ljava/lang/Object;)Lp8/n1;
+    .locals 1
+    .param p0    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<V:",
+            "Ljava/lang/Object;",
+            ">(TV;)",
+            "Lp8/n1;"
+        }
+    .end annotation
+
+    .line 1
+    if-nez p0, :cond_0
+
+    .line 2
+    .line 3
+    invoke-static {}, Lc0/p;->nullFuture()Lp8/n1;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p0
+
+    .line 7
+    return-object p0
+
+    .line 8
+    :cond_0
+    new-instance v0, Lc0/o;
+
+    .line 9
+    .line 10
+    invoke-direct {v0, p0}, Lc0/o;-><init>(Ljava/lang/Object;)V
+
+    .line 11
+    .line 12
+    .line 13
+    return-object v0
+.end method
+
+.method public static nonCancellationPropagating(Lp8/n1;)Lp8/n1;
+    .locals 2
+    .param p0    # Lp8/n1;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<V:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lp8/n1;",
+            ")",
+            "Lp8/n1;"
+        }
+    .end annotation
+
+    .line 1
+    invoke-static {p0}, Lk1/i;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 2
+    .line 3
+    .line 4
+    invoke-interface {p0}, Ljava/util/concurrent/Future;->isDone()Z
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
+
+    .line 8
+    if-eqz v0, :cond_0
+
+    .line 9
+    .line 10
+    return-object p0
+
+    .line 11
+    :cond_0
+    new-instance v0, Landroidx/camera/lifecycle/f;
+
+    .line 12
+    .line 13
+    const/4 v1, 0x1
+
+    .line 14
+    invoke-direct {v0, p0, v1}, Landroidx/camera/lifecycle/f;-><init>(Ljava/lang/Object;I)V
+
+    .line 15
+    .line 16
+    .line 17
+    invoke-static {v0}, Ll0/o;->getFuture(Ll0/l;)Lp8/n1;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object p0
+
+    .line 21
+    return-object p0
+.end method
+
+.method public static propagate(Lp8/n1;Ll0/j;)V
+    .locals 2
+    .param p0    # Lp8/n1;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Ll0/j;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<V:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lp8/n1;",
+            "Ll0/j;",
+            ")V"
+        }
+    .end annotation
+
+    .line 1
+    sget-object v0, Lc0/l;->a:Lc0/h;
+
+    .line 2
+    .line 3
+    invoke-static {}, Lb0/a;->directExecutor()Ljava/util/concurrent/Executor;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v1
+
+    .line 7
+    invoke-static {p0, v0, p1, v1}, Lc0/l;->propagateTransform(Lp8/n1;Ll/a;Ll0/j;Ljava/util/concurrent/Executor;)V
+
+    .line 8
+    .line 9
+    .line 10
+    return-void
+.end method
+
+.method public static propagateTransform(Lp8/n1;Ll/a;Ll0/j;Ljava/util/concurrent/Executor;)V
+    .locals 1
+    .param p0    # Lp8/n1;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Ll/a;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ll0/j;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/util/concurrent/Executor;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<I:",
+            "Ljava/lang/Object;",
+            "O:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lp8/n1;",
+            "Ll/a;",
+            "Ll0/j;",
+            "Ljava/util/concurrent/Executor;",
+            ")V"
+        }
+    .end annotation
+
+    .line 1
+    const/4 v0, 0x1
+
+    .line 2
+    invoke-static {v0, p0, p1, p2, p3}, Lc0/l;->a(ZLp8/n1;Ll/a;Ll0/j;Ljava/util/concurrent/Executor;)V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public static successfulAsList(Ljava/util/Collection;)Lp8/n1;
+    .locals 3
+    .param p0    # Ljava/util/Collection;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<V:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/util/Collection<",
+            "+",
+            "Lp8/n1;",
+            ">;)",
+            "Lp8/n1;"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Lc0/t;
+
+    .line 2
+    .line 3
+    new-instance v1, Ljava/util/ArrayList;
+
+    .line 4
+    .line 5
+    invoke-direct {v1, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    .line 6
+    .line 7
+    .line 8
+    const/4 p0, 0x0
+
+    .line 9
+    invoke-static {}, Lb0/a;->directExecutor()Ljava/util/concurrent/Executor;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v2
+
+    .line 13
+    invoke-direct {v0, v1, p0, v2}, Lc0/t;-><init>(Ljava/util/ArrayList;ZLjava/util/concurrent/Executor;)V
+
+    .line 14
+    .line 15
+    .line 16
+    return-object v0
+.end method
+
+.method public static transform(Lp8/n1;Ll/a;Ljava/util/concurrent/Executor;)Lp8/n1;
+    .locals 1
+    .param p0    # Lp8/n1;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Ll/a;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/util/concurrent/Executor;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<I:",
+            "Ljava/lang/Object;",
+            "O:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lp8/n1;",
+            "Ll/a;",
+            "Ljava/util/concurrent/Executor;",
+            ")",
+            "Lp8/n1;"
+        }
+    .end annotation
+
+    .line 1
+    invoke-static {p1}, Lk1/i;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 2
+    .line 3
+    .line 4
+    new-instance v0, Lc0/g;
+
+    .line 5
+    .line 6
+    invoke-direct {v0, p1}, Lc0/g;-><init>(Ll/a;)V
+
+    .line 7
+    .line 8
+    .line 9
+    invoke-static {p0, v0, p2}, Lc0/l;->transformAsync(Lp8/n1;Lc0/a;Ljava/util/concurrent/Executor;)Lp8/n1;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object p0
+
+    .line 13
+    return-object p0
+.end method
+
+.method public static transformAsync(Lp8/n1;Lc0/a;Ljava/util/concurrent/Executor;)Lp8/n1;
+    .locals 1
+    .param p0    # Lp8/n1;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Lc0/a;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/util/concurrent/Executor;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<I:",
+            "Ljava/lang/Object;",
+            "O:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lp8/n1;",
+            "Lc0/a;",
+            "Ljava/util/concurrent/Executor;",
+            ")",
+            "Lp8/n1;"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Lc0/c;
+
+    .line 2
+    .line 3
+    invoke-direct {v0, p1, p0}, Lc0/c;-><init>(Lc0/a;Lp8/n1;)V
+
+    .line 4
+    .line 5
+    .line 6
+    invoke-interface {p0, v0, p2}, Lp8/n1;->addListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    .line 7
+    .line 8
+    .line 9
+    return-object v0
+.end method

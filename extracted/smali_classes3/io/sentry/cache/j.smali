@@ -1,0 +1,1400 @@
+.class public final Lio/sentry/cache/j;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lio/sentry/o0;
+
+
+# static fields
+.field public static final BREADCRUMBS_FILENAME:Ljava/lang/String; = "breadcrumbs.json"
+
+.field public static final CONTEXTS_FILENAME:Ljava/lang/String; = "contexts.json"
+
+.field public static final EXTRAS_FILENAME:Ljava/lang/String; = "extras.json"
+
+.field public static final FINGERPRINT_FILENAME:Ljava/lang/String; = "fingerprint.json"
+
+.field public static final LEVEL_FILENAME:Ljava/lang/String; = "level.json"
+
+.field public static final REQUEST_FILENAME:Ljava/lang/String; = "request.json"
+
+.field public static final SCOPE_CACHE:Ljava/lang/String; = ".scope-cache"
+
+.field public static final TAGS_FILENAME:Ljava/lang/String; = "tags.json"
+
+.field public static final TRACE_FILENAME:Ljava/lang/String; = "trace.json"
+
+.field public static final TRANSACTION_FILENAME:Ljava/lang/String; = "transaction.json"
+
+.field public static final USER_FILENAME:Ljava/lang/String; = "user.json"
+
+
+# instance fields
+.field public final a:Lio/sentry/n4;
+
+
+# direct methods
+.method public constructor <init>(Lio/sentry/n4;)V
+    .locals 0
+    .param p1    # Lio/sentry/n4;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    iput-object p1, p0, Lio/sentry/cache/j;->a:Lio/sentry/n4;
+
+    .line 5
+    .line 6
+    return-void
+.end method
+
+.method public static read(Lio/sentry/n4;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    .locals 1
+    .param p0    # Lio/sentry/n4;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Class;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lio/sentry/n4;",
+            "Ljava/lang/String;",
+            "Ljava/lang/Class<",
+            "TT;>;)TT;"
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p0, p1, p2, v0}, Lio/sentry/cache/j;->read(Lio/sentry/n4;Ljava/lang/String;Ljava/lang/Class;Lio/sentry/z0;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static read(Lio/sentry/n4;Ljava/lang/String;Ljava/lang/Class;Lio/sentry/z0;)Ljava/lang/Object;
+    .locals 4
+    .param p0    # Lio/sentry/n4;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Class;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            "R:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lio/sentry/n4;",
+            "Ljava/lang/String;",
+            "Ljava/lang/Class<",
+            "TT;>;",
+            "Lio/sentry/z0;",
+            ")TT;"
+        }
+    .end annotation
+
+    .line 2
+    const/16 v1, 0xc
+
+    new-array v0, v1, [C
+
+    const/16 v2, 0x18db
+
+    xor-int/lit16 v2, v2, 0x18b8
+
+    int-to-char v2, v2
+
+    const v1, 0x7
+
+    aput-char v2, v0, v1
+
+    const v1, 0x7
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x13
+
+    int-to-char v2, v2
+
+    const v1, 0x4
+
+    aput-char v2, v0, v1
+
+    const v1, 0x4
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x1f
+
+    int-to-char v2, v2
+
+    const v1, 0x3
+
+    aput-char v2, v0, v1
+
+    const v1, 0x7
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x10
+
+    int-to-char v2, v2
+
+    const v1, 0x1
+
+    aput-char v2, v0, v1
+
+    const v1, 0x1
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x5e
+
+    int-to-char v2, v2
+
+    const v1, 0x6
+
+    aput-char v2, v0, v1
+
+    const v1, 0x7
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x0
+
+    int-to-char v2, v2
+
+    const v1, 0x2
+
+    aput-char v2, v0, v1
+
+    const v1, 0x6
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x45
+
+    int-to-char v2, v2
+
+    const v1, 0xa
+
+    aput-char v2, v0, v1
+
+    const v1, 0xa
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0xb
+
+    int-to-char v2, v2
+
+    const v1, 0x9
+
+    aput-char v2, v0, v1
+
+    const v1, 0x4
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x5e
+
+    int-to-char v2, v2
+
+    const v1, 0x0
+
+    aput-char v2, v0, v1
+
+    const v1, 0xa
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0xd
+
+    int-to-char v2, v2
+
+    const v1, 0x5
+
+    aput-char v2, v0, v1
+
+    const v1, 0x9
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x2
+
+    int-to-char v2, v2
+
+    const v1, 0x8
+
+    aput-char v2, v0, v1
+
+    const v1, 0x5
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x0
+
+    int-to-char v2, v2
+
+    const v1, 0xb
+
+    aput-char v2, v0, v1
+
+    new-instance v2, Ljava/lang/String;
+
+    invoke-direct {v2, v0}, Ljava/lang/String;-><init>([C)V
+
+    invoke-virtual {v2}, Ljava/lang/String;->intern()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {p0, v3, p1, p2, p3}, Lio/sentry/cache/b;->b(Lio/sentry/n4;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Lio/sentry/z0;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/Runnable;)V
+    .locals 7
+
+    .line 1
+    iget-object v3, p0, Lio/sentry/cache/j;->a:Lio/sentry/n4;
+
+    .line 2
+    .line 3
+    :try_start_0
+    invoke-virtual {v3}, Lio/sentry/n4;->getExecutorService()Lio/sentry/q0;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v4
+
+    .line 7
+    new-instance v5, Landroidx/appcompat/app/w0;
+
+    .line 8
+    .line 9
+    const/16 v6, 0x13
+
+    .line 10
+    .line 11
+    invoke-direct {v5, v6, p0, p1}, Landroidx/appcompat/app/w0;-><init>(ILjava/lang/Object;Ljava/lang/Object;)V
+
+    .line 12
+    .line 13
+    .line 14
+    invoke-interface {v4, v5}, Lio/sentry/q0;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 15
+    .line 16
+    .line 17
+    goto/16 :goto_0
+
+    .line 18
+    :catchall_0
+    move-exception p1
+
+    .line 19
+    invoke-virtual {v3}, Lio/sentry/n4;->getLogger()Lio/sentry/ILogger;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v3
+
+    .line 23
+    sget-object v4, Lio/sentry/e4;->ERROR:Lio/sentry/e4;
+
+    .line 24
+    .line 25
+    const/16 v1, 0x29
+
+    new-array v0, v1, [C
+
+    const/16 v2, -0x6158
+
+    xor-int/lit16 v2, v2, -0x6133
+
+    int-to-char v2, v2
+
+    const v1, 0x23
+
+    aput-char v2, v0, v1
+
+    const v1, 0x23
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0xa
+
+    int-to-char v2, v2
+
+    const v1, 0x1a
+
+    aput-char v2, v0, v1
+
+    const v1, 0x23
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0xb
+
+    int-to-char v2, v2
+
+    const v1, 0xc
+
+    aput-char v2, v0, v1
+
+    const v1, 0x1a
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0xb
+
+    int-to-char v2, v2
+
+    const v1, 0x24
+
+    aput-char v2, v0, v1
+
+    const v1, 0x24
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x10
+
+    int-to-char v2, v2
+
+    const v1, 0xe
+
+    aput-char v2, v0, v1
+
+    const v1, 0xc
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0xc
+
+    int-to-char v2, v2
+
+    const v1, 0x1d
+
+    aput-char v2, v0, v1
+
+    const v1, 0x24
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x44
+
+    int-to-char v2, v2
+
+    const v1, 0x1f
+
+    aput-char v2, v0, v1
+
+    const v1, 0xe
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x0
+
+    int-to-char v2, v2
+
+    const v1, 0x9
+
+    aput-char v2, v0, v1
+
+    const v1, 0xe
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x6
+
+    int-to-char v2, v2
+
+    const v1, 0x2
+
+    aput-char v2, v0, v1
+
+    const v1, 0xe
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x1d
+
+    int-to-char v2, v2
+
+    const v1, 0x3
+
+    aput-char v2, v0, v1
+
+    const v1, 0x2
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x6
+
+    int-to-char v2, v2
+
+    const v1, 0x1b
+
+    aput-char v2, v0, v1
+
+    const v1, 0x1f
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x55
+
+    int-to-char v2, v2
+
+    const v1, 0x15
+
+    aput-char v2, v0, v1
+
+    const v1, 0xe
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x54
+
+    int-to-char v2, v2
+
+    const v1, 0xd
+
+    aput-char v2, v0, v1
+
+    const v1, 0xc
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x2
+
+    int-to-char v2, v2
+
+    const v1, 0x5
+
+    aput-char v2, v0, v1
+
+    const v1, 0xe
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x17
+
+    int-to-char v2, v2
+
+    const v1, 0x21
+
+    aput-char v2, v0, v1
+
+    const v1, 0x5
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x8
+
+    int-to-char v2, v2
+
+    const v1, 0x28
+
+    aput-char v2, v0, v1
+
+    const v1, 0x1d
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0xc
+
+    int-to-char v2, v2
+
+    const v1, 0x19
+
+    aput-char v2, v0, v1
+
+    const v1, 0x9
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x18
+
+    int-to-char v2, v2
+
+    const v1, 0x26
+
+    aput-char v2, v0, v1
+
+    const v1, 0x1a
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0xb
+
+    int-to-char v2, v2
+
+    const v1, 0x17
+
+    aput-char v2, v0, v1
+
+    const v1, 0xd
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x4f
+
+    int-to-char v2, v2
+
+    const v1, 0x14
+
+    aput-char v2, v0, v1
+
+    const v1, 0xe
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x27
+
+    int-to-char v2, v2
+
+    const v1, 0x0
+
+    aput-char v2, v0, v1
+
+    const v1, 0x21
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x10
+
+    int-to-char v2, v2
+
+    const v1, 0x10
+
+    aput-char v2, v0, v1
+
+    const v1, 0x1d
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x11
+
+    int-to-char v2, v2
+
+    const v1, 0x20
+
+    aput-char v2, v0, v1
+
+    const v1, 0x1f
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x41
+
+    int-to-char v2, v2
+
+    const v1, 0x8
+
+    aput-char v2, v0, v1
+
+    const v1, 0x15
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x55
+
+    int-to-char v2, v2
+
+    const v1, 0x1c
+
+    aput-char v2, v0, v1
+
+    const v1, 0x5
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x9
+
+    int-to-char v2, v2
+
+    const v1, 0x1e
+
+    aput-char v2, v0, v1
+
+    const v1, 0x1f
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x55
+
+    int-to-char v2, v2
+
+    const v1, 0x25
+
+    aput-char v2, v0, v1
+
+    const v1, 0x9
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x1d
+
+    int-to-char v2, v2
+
+    const v1, 0x6
+
+    aput-char v2, v0, v1
+
+    const v1, 0x3
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0xa
+
+    int-to-char v2, v2
+
+    const v1, 0x13
+
+    aput-char v2, v0, v1
+
+    const v1, 0x1e
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0xd
+
+    int-to-char v2, v2
+
+    const v1, 0x22
+
+    aput-char v2, v0, v1
+
+    const v1, 0x1d
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x42
+
+    int-to-char v2, v2
+
+    const v1, 0x12
+
+    aput-char v2, v0, v1
+
+    const v1, 0x3
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0xc
+
+    int-to-char v2, v2
+
+    const v1, 0x27
+
+    aput-char v2, v0, v1
+
+    const v1, 0x1b
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x1d
+
+    int-to-char v2, v2
+
+    const v1, 0xa
+
+    aput-char v2, v0, v1
+
+    const v1, 0x24
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x44
+
+    int-to-char v2, v2
+
+    const v1, 0x18
+
+    aput-char v2, v0, v1
+
+    const v1, 0x20
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x1f
+
+    int-to-char v2, v2
+
+    const v1, 0x16
+
+    aput-char v2, v0, v1
+
+    const v1, 0x1b
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x1b
+
+    int-to-char v2, v2
+
+    const v1, 0xb
+
+    aput-char v2, v0, v1
+
+    const v1, 0xb
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0xa
+
+    int-to-char v2, v2
+
+    const v1, 0x1
+
+    aput-char v2, v0, v1
+
+    const v1, 0xa
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x13
+
+    int-to-char v2, v2
+
+    const v1, 0x7
+
+    aput-char v2, v0, v1
+
+    const v1, 0x1e
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x4
+
+    int-to-char v2, v2
+
+    const v1, 0xf
+
+    aput-char v2, v0, v1
+
+    const v1, 0xf
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0xa
+
+    int-to-char v2, v2
+
+    const v1, 0x11
+
+    aput-char v2, v0, v1
+
+    const v1, 0x10
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x12
+
+    int-to-char v2, v2
+
+    const v1, 0x4
+
+    aput-char v2, v0, v1
+
+    new-instance v2, Ljava/lang/String;
+
+    invoke-direct {v2, v0}, Ljava/lang/String;-><init>([C)V
+
+    invoke-virtual {v2}, Ljava/lang/String;->intern()Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 26
+    .line 27
+    invoke-interface {v3, v4, v5, p1}, Lio/sentry/ILogger;->log(Lio/sentry/e4;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 28
+    .line 29
+    .line 30
+    :goto_0
+    return-void
+.end method
+
+.method public bridge synthetic addBreadcrumb(Lio/sentry/f;)V
+    .locals 0
+    .param p1    # Lio/sentry/f;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-super {p0, p1}, Lio/sentry/o0;->addBreadcrumb(Lio/sentry/f;)V
+
+    return-void
+.end method
+
+.method public final b(Ljava/lang/Object;Ljava/lang/String;)V
+    .locals 5
+
+    .line 1
+    iget-object v3, p0, Lio/sentry/cache/j;->a:Lio/sentry/n4;
+
+    .line 2
+    .line 3
+    const/16 v1, 0xc
+
+    new-array v0, v1, [C
+
+    const/16 v2, -0x22e3
+
+    xor-int/lit16 v2, v2, -0x2284
+
+    int-to-char v2, v2
+
+    const v1, 0x8
+
+    aput-char v2, v0, v1
+
+    const v1, 0x8
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x2
+
+    int-to-char v2, v2
+
+    const v1, 0x9
+
+    aput-char v2, v0, v1
+
+    const v1, 0x8
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x11
+
+    int-to-char v2, v2
+
+    const v1, 0x4
+
+    aput-char v2, v0, v1
+
+    const v1, 0x4
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x1f
+
+    int-to-char v2, v2
+
+    const v1, 0x3
+
+    aput-char v2, v0, v1
+
+    const v1, 0x4
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x5e
+
+    int-to-char v2, v2
+
+    const v1, 0x0
+
+    aput-char v2, v0, v1
+
+    const v1, 0x8
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x4
+
+    int-to-char v2, v2
+
+    const v1, 0x5
+
+    aput-char v2, v0, v1
+
+    const v1, 0x8
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x4c
+
+    int-to-char v2, v2
+
+    const v1, 0x6
+
+    aput-char v2, v0, v1
+
+    const v1, 0x3
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x7
+
+    int-to-char v2, v2
+
+    const v1, 0xa
+
+    aput-char v2, v0, v1
+
+    const v1, 0x3
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0xc
+
+    int-to-char v2, v2
+
+    const v1, 0x2
+
+    aput-char v2, v0, v1
+
+    const v1, 0x6
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x5e
+
+    int-to-char v2, v2
+
+    const v1, 0x1
+
+    aput-char v2, v0, v1
+
+    const v1, 0x6
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x48
+
+    int-to-char v2, v2
+
+    const v1, 0xb
+
+    aput-char v2, v0, v1
+
+    const v1, 0x6
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x4e
+
+    int-to-char v2, v2
+
+    const v1, 0x7
+
+    aput-char v2, v0, v1
+
+    new-instance v2, Ljava/lang/String;
+
+    invoke-direct {v2, v0}, Ljava/lang/String;-><init>([C)V
+
+    invoke-virtual {v2}, Ljava/lang/String;->intern()Ljava/lang/String;
+
+    move-result-object v4
+
+    .line 4
+    .line 5
+    invoke-static {v3, p1, v4, p2}, Lio/sentry/cache/b;->c(Lio/sentry/n4;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 6
+    .line 7
+    .line 8
+    return-void
+.end method
+
+.method public bridge synthetic removeExtra(Ljava/lang/String;)V
+    .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-super {p0, p1}, Lio/sentry/o0;->removeExtra(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public bridge synthetic removeTag(Ljava/lang/String;)V
+    .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-super {p0, p1}, Lio/sentry/o0;->removeTag(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public setBreadcrumbs(Ljava/util/Collection;)V
+    .locals 2
+    .param p1    # Ljava/util/Collection;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Collection<",
+            "Lio/sentry/f;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Lio/sentry/cache/i;
+
+    .line 2
+    .line 3
+    const/4 v1, 0x1
+
+    .line 4
+    invoke-direct {v0, p0, p1, v1}, Lio/sentry/cache/i;-><init>(Lio/sentry/cache/j;Ljava/util/Collection;I)V
+
+    .line 5
+    .line 6
+    .line 7
+    invoke-virtual {p0, v0}, Lio/sentry/cache/j;->a(Ljava/lang/Runnable;)V
+
+    .line 8
+    .line 9
+    .line 10
+    return-void
+.end method
+
+.method public setContexts(Lio/sentry/protocol/c;)V
+    .locals 2
+    .param p1    # Lio/sentry/protocol/c;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+
+    .line 1
+    new-instance v0, Landroidx/appcompat/app/w0;
+
+    .line 2
+    .line 3
+    const/16 v1, 0x18
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v1, p0, p1}, Landroidx/appcompat/app/w0;-><init>(ILjava/lang/Object;Ljava/lang/Object;)V
+
+    .line 6
+    .line 7
+    .line 8
+    invoke-virtual {p0, v0}, Lio/sentry/cache/j;->a(Ljava/lang/Runnable;)V
+
+    .line 9
+    .line 10
+    .line 11
+    return-void
+.end method
+
+.method public bridge synthetic setExtra(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-super {p0, p1, p2}, Lio/sentry/o0;->setExtra(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public setExtras(Ljava/util/Map;)V
+    .locals 2
+    .param p1    # Ljava/util/Map;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Object;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Lio/sentry/cache/h;
+
+    .line 2
+    .line 3
+    const/4 v1, 0x1
+
+    .line 4
+    invoke-direct {v0, p0, p1, v1}, Lio/sentry/cache/h;-><init>(Lio/sentry/cache/j;Ljava/util/Map;I)V
+
+    .line 5
+    .line 6
+    .line 7
+    invoke-virtual {p0, v0}, Lio/sentry/cache/j;->a(Ljava/lang/Runnable;)V
+
+    .line 8
+    .line 9
+    .line 10
+    return-void
+.end method
+
+.method public setFingerprint(Ljava/util/Collection;)V
+    .locals 2
+    .param p1    # Ljava/util/Collection;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Collection<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Lio/sentry/cache/i;
+
+    .line 2
+    .line 3
+    const/4 v1, 0x0
+
+    .line 4
+    invoke-direct {v0, p0, p1, v1}, Lio/sentry/cache/i;-><init>(Lio/sentry/cache/j;Ljava/util/Collection;I)V
+
+    .line 5
+    .line 6
+    .line 7
+    invoke-virtual {p0, v0}, Lio/sentry/cache/j;->a(Ljava/lang/Runnable;)V
+
+    .line 8
+    .line 9
+    .line 10
+    return-void
+.end method
+
+.method public setLevel(Lio/sentry/e4;)V
+    .locals 2
+
+    .line 1
+    new-instance v0, Landroidx/appcompat/app/w0;
+
+    .line 2
+    .line 3
+    const/16 v1, 0x15
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v1, p0, p1}, Landroidx/appcompat/app/w0;-><init>(ILjava/lang/Object;Ljava/lang/Object;)V
+
+    .line 6
+    .line 7
+    .line 8
+    invoke-virtual {p0, v0}, Lio/sentry/cache/j;->a(Ljava/lang/Runnable;)V
+
+    .line 9
+    .line 10
+    .line 11
+    return-void
+.end method
+
+.method public setRequest(Lio/sentry/protocol/l;)V
+    .locals 2
+
+    .line 1
+    new-instance v0, Landroidx/appcompat/app/w0;
+
+    .line 2
+    .line 3
+    const/16 v1, 0x16
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v1, p0, p1}, Landroidx/appcompat/app/w0;-><init>(ILjava/lang/Object;Ljava/lang/Object;)V
+
+    .line 6
+    .line 7
+    .line 8
+    invoke-virtual {p0, v0}, Lio/sentry/cache/j;->a(Ljava/lang/Runnable;)V
+
+    .line 9
+    .line 10
+    .line 11
+    return-void
+.end method
+
+.method public bridge synthetic setTag(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-super {p0, p1, p2}, Lio/sentry/o0;->setTag(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public setTags(Ljava/util/Map;)V
+    .locals 2
+    .param p1    # Ljava/util/Map;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Lio/sentry/cache/h;
+
+    .line 2
+    .line 3
+    const/4 v1, 0x0
+
+    .line 4
+    invoke-direct {v0, p0, p1, v1}, Lio/sentry/cache/h;-><init>(Lio/sentry/cache/j;Ljava/util/Map;I)V
+
+    .line 5
+    .line 6
+    .line 7
+    invoke-virtual {p0, v0}, Lio/sentry/cache/j;->a(Ljava/lang/Runnable;)V
+
+    .line 8
+    .line 9
+    .line 10
+    return-void
+.end method
+
+.method public setTrace(Lio/sentry/b5;)V
+    .locals 2
+
+    .line 1
+    new-instance v0, Landroidx/appcompat/app/w0;
+
+    .line 2
+    .line 3
+    const/16 v1, 0x17
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v1, p0, p1}, Landroidx/appcompat/app/w0;-><init>(ILjava/lang/Object;Ljava/lang/Object;)V
+
+    .line 6
+    .line 7
+    .line 8
+    invoke-virtual {p0, v0}, Lio/sentry/cache/j;->a(Ljava/lang/Runnable;)V
+
+    .line 9
+    .line 10
+    .line 11
+    return-void
+.end method
+
+.method public setTransaction(Ljava/lang/String;)V
+    .locals 2
+
+    .line 1
+    new-instance v0, Landroidx/appcompat/app/w0;
+
+    .line 2
+    .line 3
+    const/16 v1, 0x12
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v1, p0, p1}, Landroidx/appcompat/app/w0;-><init>(ILjava/lang/Object;Ljava/lang/Object;)V
+
+    .line 6
+    .line 7
+    .line 8
+    invoke-virtual {p0, v0}, Lio/sentry/cache/j;->a(Ljava/lang/Runnable;)V
+
+    .line 9
+    .line 10
+    .line 11
+    return-void
+.end method
+
+.method public setUser(Lio/sentry/protocol/a0;)V
+    .locals 2
+
+    .line 1
+    new-instance v0, Landroidx/appcompat/app/w0;
+
+    .line 2
+    .line 3
+    const/16 v1, 0x14
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v1, p0, p1}, Landroidx/appcompat/app/w0;-><init>(ILjava/lang/Object;Ljava/lang/Object;)V
+
+    .line 6
+    .line 7
+    .line 8
+    invoke-virtual {p0, v0}, Lio/sentry/cache/j;->a(Ljava/lang/Runnable;)V
+
+    .line 9
+    .line 10
+    .line 11
+    return-void
+.end method

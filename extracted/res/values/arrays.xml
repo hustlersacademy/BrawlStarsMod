@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="facebook_read_pemissions">
+        <item>user_posts</item>
+    </string-array>
+    <array name="google_pemissions" />
+    <array name="kakao_game_android_permissions" />
+    <string-array name="popup_side_indexer">
+        <item>A</item>
+        <item>C</item>
+        <item>E</item>
+        <item>G</item>
+        <item>I</item>
+        <item>K</item>
+        <item>M</item>
+        <item>O</item>
+        <item>S</item>
+        <item>U</item>
+        <item>Z</item>
+        <item>\#</item>
+    </string-array>
+    <string-array name="popup_side_indexer_landscape">
+        <item>A</item>
+        <item>F</item>
+        <item>O</item>
+        <item>S</item>
+        <item>Z</item>
+        <item>\#</item>
+    </string-array>
+    <string-array name="side_indexer">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>Z</item>
+        <item>\#</item>
+    </string-array>
+    <string-array name="side_indexer_landscape">
+        <item>A</item>
+        <item>B</item>
+        <item>G</item>
+        <item>M</item>
+        <item>O</item>
+        <item>P</item>
+        <item>T</item>
+        <item>U</item>
+        <item>Z</item>
+        <item>\#</item>
+    </string-array>
+</resources>

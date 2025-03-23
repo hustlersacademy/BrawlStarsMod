@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="?empty_search_result_text_size" android:textColor="?gray600s" android:gravity="center" android:id="@id/empty_search_result_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/empty_search_result_margin_top" android:text="@string/empty_search_result" />
+</LinearLayout>

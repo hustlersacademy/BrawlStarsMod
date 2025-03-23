@@ -1,0 +1,53 @@
+.class public abstract Ll1/w2;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# direct methods
+.method public static a(Landroid/view/ViewStructure;Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Landroid/view/ViewStructure;->setClassName(Ljava/lang/String;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method public static b(Landroid/view/ViewStructure;Ljava/lang/CharSequence;)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Landroid/view/ViewStructure;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method public static c(Landroid/view/ViewStructure;IIIIII)V
+    .locals 0
+
+    .line 1
+    invoke-virtual/range {p0 .. p6}, Landroid/view/ViewStructure;->setDimens(IIIIII)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method public static d(Landroid/view/ViewStructure;Ljava/lang/CharSequence;)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Landroid/view/ViewStructure;->setText(Ljava/lang/CharSequence;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method

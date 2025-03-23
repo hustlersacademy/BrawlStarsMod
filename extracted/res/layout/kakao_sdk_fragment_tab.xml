@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.kakao.sdk.friend.view.EmptyView android:id="@id/empty_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/title_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/kakao_sdk_title_bar" />
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="?tab_layout_height" android:layout_marginLeft="@dimen/tab_layout_margin_horizontal" android:layout_marginRight="@dimen/tab_layout_margin_horizontal" android:layout_marginHorizontal="@dimen/tab_layout_margin_horizontal">
+            <TextView android:textSize="@dimen/tab_layout_text_size" android:gravity="center" android:id="@id/friend_tab" android:layout_width="0.0dip" android:layout_height="0.0dip" android:text="@string/friend" app:layout_constraintBottom_toTopOf="@id/tab_layout" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toLeftOf="@id/chat_tab" app:layout_constraintTop_toTopOf="parent" />
+            <TextView android:textSize="@dimen/tab_layout_text_size" android:gravity="center" android:id="@id/chat_tab" android:layout_width="0.0dip" android:layout_height="0.0dip" android:text="@string/chat" app:layout_constraintBottom_toTopOf="@id/tab_layout" app:layout_constraintLeft_toRightOf="@id/friend_tab" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <com.google.android.material.tabs.TabLayout android:id="@id/tab_layout" android:layout_width="fill_parent" android:layout_height="@dimen/tab_indicator_height" android:importantForAccessibility="noHideDescendants" app:layout_constraintBottom_toBottomOf="parent" app:tabGravity="fill" app:tabIndicatorColor="?gray900s" app:tabMaxWidth="0.0dip" app:tabMode="fixed" app:tabRippleColor="@color/transparent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <View android:background="?gray200a" android:layout_width="fill_parent" android:layout_height="@dimen/category_divider_height" android:layout_marginBottom="?tab_layout_margin_bottom" />
+        <androidx.viewpager2.widget.ViewPager2 android:id="@id/pager" android:focusable="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

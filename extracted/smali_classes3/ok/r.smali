@@ -1,0 +1,483 @@
+.class public final Lok/r;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlinx/serialization/KSerializer;
+
+
+# static fields
+.field public static final INSTANCE:Lok/r;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+.field public static final a:Lok/i2;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 6
+
+    .line 1
+    new-instance v3, Lok/r;
+
+    .line 2
+    .line 3
+    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    sput-object v3, Lok/r;->INSTANCE:Lok/r;
+
+    .line 7
+    .line 8
+    new-instance v3, Lok/i2;
+
+    .line 9
+    .line 10
+    const v0, 0x349922b5
+
+    const v2, 0x66f7e869
+
+    xor-int v0, v0, v2
+
+    add-int/lit8 v0, v0, -0x5d
+
+    invoke-static/range {v0 .. v0}, Lok/r;->a(I)[C
+
+    move-result-object v1
+
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct/range {v0 .. v1}, Ljava/lang/String;-><init>([C)V
+
+    invoke-virtual/range {v0 .. v0}, Ljava/lang/String;->intern()Ljava/lang/String;
+
+    move-result-object v4
+
+    .line 11
+    .line 12
+    sget-object v5, Lmk/i;->INSTANCE:Lmk/i;
+
+    .line 13
+    .line 14
+    invoke-direct {v3, v4, v5}, Lok/i2;-><init>(Ljava/lang/String;Lmk/p;)V
+
+    .line 15
+    .line 16
+    .line 17
+    sput-object v3, Lok/r;->a:Lok/i2;
+
+    .line 18
+    .line 19
+    return-void
+.end method
+
+.method private static a(I)[C
+    .locals 3
+
+    const/16 v2, 0xb
+
+    new-array v1, v2, [C
+
+    const/16 v0, -0x35ef
+
+    xor-int v0, v0, p0
+
+    int-to-char v0, v0
+
+    const v2, 0x5
+
+    aput-char v0, v1, v2
+
+    const v2, 0x5
+
+    aget-char v0, v1, v2
+
+    xor-int/lit16 v0, v0, 0x1a
+
+    int-to-char v0, v0
+
+    const v2, 0x2
+
+    aput-char v0, v1, v2
+
+    const v2, 0x2
+
+    aget-char v0, v1, v2
+
+    xor-int/lit16 v0, v0, 0x18
+
+    int-to-char v0, v0
+
+    const v2, 0x3
+
+    aput-char v0, v1, v2
+
+    const v2, 0x3
+
+    aget-char v0, v1, v2
+
+    xor-int/lit16 v0, v0, 0x3
+
+    int-to-char v0, v0
+
+    const v2, 0x1
+
+    aput-char v0, v1, v2
+
+    const v2, 0x3
+
+    aget-char v0, v1, v2
+
+    xor-int/lit16 v0, v0, 0x4
+
+    int-to-char v0, v0
+
+    const v2, 0x8
+
+    aput-char v0, v1, v2
+
+    const v2, 0x5
+
+    aget-char v0, v1, v2
+
+    xor-int/lit16 v0, v0, 0x5
+
+    int-to-char v0, v0
+
+    const v2, 0x0
+
+    aput-char v0, v1, v2
+
+    const v2, 0x1
+
+    aget-char v0, v1, v2
+
+    xor-int/lit16 v0, v0, 0x6
+
+    int-to-char v0, v0
+
+    const v2, 0x4
+
+    aput-char v0, v1, v2
+
+    const v2, 0x4
+
+    aget-char v0, v1, v2
+
+    xor-int/lit16 v0, v0, 0x1b
+
+    int-to-char v0, v0
+
+    const v2, 0xa
+
+    aput-char v0, v1, v2
+
+    const v2, 0x8
+
+    aget-char v0, v1, v2
+
+    xor-int/lit16 v0, v0, 0x2b
+
+    int-to-char v0, v0
+
+    const v2, 0x7
+
+    aput-char v0, v1, v2
+
+    const v2, 0x1
+
+    aget-char v0, v1, v2
+
+    xor-int/lit16 v0, v0, 0x41
+
+    int-to-char v0, v0
+
+    const v2, 0x6
+
+    aput-char v0, v1, v2
+
+    const v2, 0x2
+
+    aget-char v0, v1, v2
+
+    xor-int/lit16 v0, v0, 0x15
+
+    int-to-char v0, v0
+
+    const v2, 0x9
+
+    aput-char v0, v1, v2
+
+    return-object v1
+.end method
+
+
+# virtual methods
+.method public deserialize(Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Character;
+    .locals 4
+    .param p1    # Lkotlinx/serialization/encoding/Decoder;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    const/16 v1, 0x7
+
+    new-array v0, v1, [C
+
+    const/16 v2, -0x7f6d
+
+    xor-int/lit16 v2, v2, -0x7f09
+
+    int-to-char v2, v2
+
+    const v1, 0x0
+
+    aput-char v2, v0, v1
+
+    const v1, 0x0
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x1
+
+    int-to-char v2, v2
+
+    const v1, 0x1
+
+    aput-char v2, v0, v1
+
+    const v1, 0x0
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x1
+
+    int-to-char v2, v2
+
+    const v1, 0x5
+
+    aput-char v2, v0, v1
+
+    const v1, 0x0
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x0
+
+    int-to-char v2, v2
+
+    const v1, 0x4
+
+    aput-char v2, v0, v1
+
+    const v1, 0x5
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x17
+
+    int-to-char v2, v2
+
+    const v1, 0x6
+
+    aput-char v2, v0, v1
+
+    const v1, 0x6
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x11
+
+    int-to-char v2, v2
+
+    const v1, 0x2
+
+    aput-char v2, v0, v1
+
+    const v1, 0x4
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0xb
+
+    int-to-char v2, v2
+
+    const v1, 0x3
+
+    aput-char v2, v0, v1
+
+    new-instance v2, Ljava/lang/String;
+
+    invoke-direct {v2, v0}, Ljava/lang/String;-><init>([C)V
+
+    invoke-virtual {v2}, Ljava/lang/String;->intern()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 2
+    invoke-interface {p1}, Lkotlinx/serialization/encoding/Decoder;->decodeChar()C
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic deserialize(Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lok/r;->deserialize(Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Character;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    .line 1
+    sget-object v0, Lok/r;->a:Lok/i2;
+
+    .line 2
+    .line 3
+    return-object v0
+.end method
+
+.method public serialize(Lkotlinx/serialization/encoding/Encoder;C)V
+    .locals 4
+    .param p1    # Lkotlinx/serialization/encoding/Encoder;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+
+    const/16 v1, 0x7
+
+    new-array v0, v1, [C
+
+    const/16 v2, 0xde0
+
+    xor-int/lit16 v2, v2, 0xd8e
+
+    int-to-char v2, v2
+
+    const v1, 0x1
+
+    aput-char v2, v0, v1
+
+    const v1, 0x1
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0xb
+
+    int-to-char v2, v2
+
+    const v1, 0x5
+
+    aput-char v2, v0, v1
+
+    const v1, 0x5
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x17
+
+    int-to-char v2, v2
+
+    const v1, 0x6
+
+    aput-char v2, v0, v1
+
+    const v1, 0x5
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0xa
+
+    int-to-char v2, v2
+
+    const v1, 0x3
+
+    aput-char v2, v0, v1
+
+    const v1, 0x5
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x1
+
+    int-to-char v2, v2
+
+    const v1, 0x4
+
+    aput-char v2, v0, v1
+
+    const v1, 0x3
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0xc
+
+    int-to-char v2, v2
+
+    const v1, 0x2
+
+    aput-char v2, v0, v1
+
+    const v1, 0x4
+
+    aget-char v2, v0, v1
+
+    xor-int/lit16 v2, v2, 0x1
+
+    int-to-char v2, v2
+
+    const v1, 0x0
+
+    aput-char v2, v0, v1
+
+    new-instance v2, Ljava/lang/String;
+
+    invoke-direct {v2, v0}, Ljava/lang/String;-><init>([C)V
+
+    invoke-virtual {v2}, Ljava/lang/String;->intern()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 2
+    invoke-interface {p1, p2}, Lkotlinx/serialization/encoding/Encoder;->encodeChar(C)V
+
+    return-void
+.end method
+
+.method public bridge synthetic serialize(Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+    .locals 0
+
+    .line 1
+    check-cast p2, Ljava/lang/Character;
+
+    invoke-virtual {p2}, Ljava/lang/Character;->charValue()C
+
+    move-result p2
+
+    invoke-virtual {p0, p1, p2}, Lok/r;->serialize(Lkotlinx/serialization/encoding/Encoder;C)V
+
+    return-void
+.end method

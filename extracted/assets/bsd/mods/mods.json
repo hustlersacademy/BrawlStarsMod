@@ -1,0 +1,22 @@
+[
+    {
+        "path": "BSDCsvPatches",
+        "enabled": true,
+        "isOnByDefault": true
+    },
+    {
+        "path": "LeonCloneMod",
+        "enabled": true,
+        "isOnByDefault": false
+    },
+    {
+        "path": "SecretPinsMod",
+        "enabled": true,
+        "isOnByDefault": false
+    },
+    {
+        "path": "OldRankSystemMod",
+        "enabled": true,
+        "isOnByDefault": false
+    }
+]

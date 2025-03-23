@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@null" android:layout_width="@null" android:layout_height="wrap_content" android:layout_centerInParent="true" android:paddingStart="17.0dip" android:paddingEnd="17.0dip">
+        <TextView android:textSize="@null" android:textStyle="bold" android:textColor="#ff453e26" android:gravity="center" android:layout_gravity="center" android:id="@id/kakao_game_sdk_logout_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="43.0dip" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" />
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/kakao_game_sdk_logout_idp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="37.0dip">
+            <ImageView android:id="@id/kakao_game_sdk_logout_idp_icon" android:layout_width="wrap_content" android:layout_height="20.0dip" />
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ff452e26" android:id="@id/kakao_game_sdk_logout_idp_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@null" />
+        </LinearLayout>
+        <View android:layout_gravity="center" android:id="@id/kakao_game_sdk_logout_idp_line" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_marginTop="7.0dip" />
+        <TextView android:textSize="12.0sp" android:textColor="#ff452e26" android:gravity="center" android:layout_gravity="center" android:id="@id/kakao_game_sdk_logout_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="21.0dip" android:layout_marginBottom="15.0dip">
+            <TextView android:textSize="@null" android:textColor="#ff434343" android:gravity="center" android:id="@id/kakao_game_sdk_logout_btn_cancel" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/zinny_sdk_common_button_cancel" android:layout_weight="1.0" />
+            <TextView android:textSize="@null" android:textColor="#ff434343" android:gravity="center" android:id="@id/kakao_game_sdk_logout_btn_ok" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginStart="5.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

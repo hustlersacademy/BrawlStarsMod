@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/error_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <TextView android:textSize="@dimen/error_retry_view_text_size" android:textColor="?gray600s" android:gravity="center" android:id="@id/error_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/retry_message" />
+        <ImageButton android:layout_gravity="center" android:id="@id/refresh_button" android:background="@drawable/kakao_sdk_round_button" android:layout_width="@dimen/error_retry_view_button_size" android:layout_height="@dimen/error_retry_view_button_size" android:layout_marginTop="@dimen/error_retry_view_button_margin_top" android:src="@null" app:tint="?gray900s" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

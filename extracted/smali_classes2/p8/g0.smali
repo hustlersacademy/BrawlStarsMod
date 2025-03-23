@@ -1,0 +1,95 @@
+.class public final Lp8/g0;
+.super Lp8/i0;
+.source "SourceFile"
+
+
+# instance fields
+.field public final synthetic e:Lp8/j0;
+
+
+# direct methods
+.method public constructor <init>(Lp8/j0;Ljava/util/concurrent/Executor;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lp8/g0;->e:Lp8/j0;
+
+    .line 2
+    .line 3
+    invoke-direct {p0, p1, p2}, Lp8/i0;-><init>(Lp8/j0;Ljava/util/concurrent/Executor;)V
+
+    .line 4
+    .line 5
+    .line 6
+    const/4 p1, 0x0
+
+    .line 7
+    invoke-static {p1}, Ll8/n0;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object p1
+
+    .line 11
+    if-nez p1, :cond_0
+
+    .line 12
+    .line 13
+    return-void
+
+    .line 14
+    :cond_0
+    new-instance p1, Ljava/lang/ClassCastException;
+
+    .line 15
+    .line 16
+    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
+
+    .line 17
+    .line 18
+    .line 19
+    throw p1
+.end method
+
+
+# virtual methods
+.method public final e()Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x0
+
+    .line 2
+    throw v0
+.end method
+
+.method public final f()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x0
+
+    .line 2
+    throw v0
+.end method
+
+.method public final h(Ljava/lang/Object;)V
+    .locals 1
+
+    .line 1
+    check-cast p1, Lp8/n1;
+
+    .line 2
+    .line 3
+    iget-object v0, p0, Lp8/g0;->e:Lp8/j0;
+
+    .line 4
+    .line 5
+    invoke-virtual {v0, p1}, Lp8/s;->o(Lp8/n1;)Z
+
+    .line 6
+    .line 7
+    .line 8
+    return-void
+.end method

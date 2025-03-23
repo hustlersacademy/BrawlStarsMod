@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/single_toast_text_size" android:textColor="?gray600s" android:gravity="center" android:id="@id/toast_tv" android:background="@drawable/kakao_sdk_index_bg" android:padding="@dimen/single_toast_text_view_padding" android:layout_width="@dimen/single_toast_size" android:layout_height="@dimen/single_toast_size" android:maxWidth="@dimen/single_toast_size" android:minWidth="@dimen/single_toast_size" android:includeFontPadding="false" app:backgroundTint="?gray050s" />
+    <ImageView android:id="@id/toast_iv" android:background="@drawable/kakao_sdk_index_bg" android:padding="@dimen/single_toast_image_view_padding" android:visibility="gone" android:layout_width="@dimen/single_toast_size" android:layout_height="@dimen/single_toast_size" android:maxWidth="@dimen/single_toast_size" android:minWidth="@dimen/single_toast_size" app:backgroundTint="?gray050s" />
+</FrameLayout>
