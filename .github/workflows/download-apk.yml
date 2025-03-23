@@ -19,12 +19,10 @@ jobs:
           sudo chmod +x /usr/local/bin/apktool
           sudo apt-get install -y zip
 
-      - name: Download APK from Private Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Download APK from Release
         run: |
-          curl -L -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/octet-stream" \
-          "https://github.com/hustlersacademy/BrawlStarsMod/releases/download/v60.448/bsd_brawl_v60.448_.29_2.apk" -o bsd_brawl_v60.apk
+          # Simplified for public access; token optional since repo is public
+          curl -L "https://github.com/hustlersacademy/BrawlStarsMod/releases/download/v60.448/bsd_brawl_v60.448_.29_2.apk" -o bsd_brawl_v60.apk
 
       - name: Extract APK
         run: |
@@ -54,10 +52,16 @@ jobs:
         run: |
           zip -r extracted.zip extracted
 
-      - name: Update Release with ZIP
+      - name: Create New Release with APK and ZIP
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v60.448
-          files: extracted.zip
+          tag_name: v60.448-new  # New tag to avoid conflict with existing v60.448
+          name: "BSD Brawl v60 with Extracted Files"  # Release title
+          body: "New release containing the original APK and extracted ZIP"  # Description
+          files: |
+            bsd_brawl_v60.apk
+            extracted.zip
+          draft: false
+          prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
