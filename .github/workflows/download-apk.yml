@@ -21,7 +21,7 @@ jobs:
 
       - name: Download APK from Release
         run: |
-          wget "" -O bsd_brawl_v60.apk
+          wget "https://github.com/hustlersacademy/BrawlStarsMod/releases/bsd_brawl_v60.448_.29_2.apk" -O bsd_brawl_v60.apk
 
       - name: Extract APK
         run: |
