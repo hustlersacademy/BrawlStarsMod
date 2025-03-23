@@ -1,36 +1,59 @@
-name: Download and Extract BSD Brawl APK
+name: Download, Extract, Commit, and Release BSD Brawl APK
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:  # Manual trigger
 
 jobs:
-  download-and-extract:
+  process-apk:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Apktool
+      - name: Install Tools
         run: |
+          # Install Apktool
           wget https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.9.3.jar -O apktool.jar
           sudo mv apktool.jar /usr/local/bin/apktool.jar
           echo '#!/bin/bash' > /usr/local/bin/apktool
           echo 'java -jar /usr/local/bin/apktool.jar "$@"' >> /usr/local/bin/apktool
           sudo chmod +x /usr/local/bin/apktool
+          # Install Zip
+          sudo apt-get install -y zip
 
-      - name: Download APK
+      - name: Download APK with Retries
         run: |
-          wget "https://dl.bsdbrawl.net/file/bsd_brawl_v60.448_(29_2).apk" -O bsd_brawl_v60.apk
+          wget --tries=5 --timeout=60 --continue "https://dl.bsdbrawl.net/file/bsd_brawl_v60.448_(29_2).apk" -O bsd_brawl_v60.apk
 
       - name: Extract APK
         run: |
           apktool d bsd_brawl_v60.apk -o extracted -f
 
+      - name: Check for Files Exceeding 100 MB
+        run: |
+          echo "Checking for files larger than 100 MB in extracted folder..."
+          if find extracted -type f -size +100M | grep .; then
+            echo "Files exceeding 100 MB:"
+            find extracted -type f -size +100M -exec ls -lh {} \;
+          else
+            echo "Perfect. No files exceeded the limit."
+          fi
+
+      - name: Commit Extracted Files to Repository
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add extracted || echo "Some files may exceed size limit"
+          git commit -m "Add extracted BSD Brawl v60 files" || echo "Commit failed, likely due to large files"
+          git push || echo "Push failed, proceeding with zipping"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Zip Extracted Files
         run: |
           zip -r extracted.zip extracted
 
-      - name: Create Release
+      - name: Create Release with APK and ZIP
         uses: softprops/action-gh-release@v1
         with:
           tag_name: v60.448
