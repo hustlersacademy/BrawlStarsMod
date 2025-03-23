@@ -19,9 +19,12 @@ jobs:
           sudo chmod +x /usr/local/bin/apktool
           sudo apt-get install -y zip
 
-      - name: Download APK from Release
+      - name: Download APK from Private Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          wget "https://github.com/hustlersacademy/BrawlStarsMod/releases/download/v60.448/bsd_brawl_v60.448_.29_2.apk" -O bsd_brawl_v60.apk
+          curl -L -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/octet-stream" \
+          "https://github.com/hustlersacademy/BrawlStarsMod/releases/download/v60.448/bsd_brawl_v60.448_.29_2.apk" -o bsd_brawl_v60.apk
 
       - name: Extract APK
         run: |
@@ -42,8 +45,8 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add extracted || echo "Some files may exceed size limit"
-          git commit -m "Add extracted BSD Brawl v60 files" || echo "Commit failed"
-          git push || echo "Push failed"
+          git commit -m "Add extracted BSD Brawl v60 files" || echo "Commit failed, likely due to large files"
+          git push || echo "Push failed, proceeding with zipping"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
