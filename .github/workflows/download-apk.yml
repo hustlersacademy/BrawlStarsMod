@@ -1,0 +1,25 @@
+name: Download BSD Brawl APK
+
+on:
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download APK
+        run: |
+          wget "https://dl.bsdbrawl.net/file/bsd_brawl_v60.448_(29_2).apk" -O bsd_brawl_v60.apk
+
+      - name: Commit APK to Repository
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add bsd_brawl_v60.apk
+          git commit -m "Add BSD Brawl v60 APK" || echo "No changes to commit"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
